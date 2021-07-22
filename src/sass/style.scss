@@ -1,0 +1,53 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
+@import './blocks/header';
+@import './blocks/about';
+@import './blocks/services';
+@import './blocks/technology';
+@import './blocks/clients';
+@import './blocks/testimonials';
+@import './blocks/contacts';
+@import './blocks/footer';
+@import './blocks/media';
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.heading {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}

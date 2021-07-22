@@ -1,0 +1,101 @@
+.header {
+    background: url(../../img/bg.jpg) center center/cover no-repeat;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    &__wrapper {
+        // background: rgba(52, 117, 202, 0.25);
+        background: rgba(0, 0, 0, 0.5);
+
+        .container {
+            .banner {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.25;
+                }
+
+                .content {
+                    padding-top: 200px;
+                    position: relative;
+                    max-width: 950px;
+                    text-align: center;
+
+                    .subtitle {
+                        color: #fff;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                    }
+
+                    h1 {
+                        color: #fff;
+                        font-size: 65px;
+                        letter-spacing: 15px;
+                    }
+                    p {
+                        line-height: 35px;
+                        font-size: 19px;
+                    }
+                }
+
+                .header_up {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 40px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    z-index: 100;
+
+                    .logo {
+                        animation: logo_anim 4s ease-in-out infinite;
+                        img {
+                            position: relative;
+                            width: 70px;
+                            height: 70px;
+                            opacity: 1;
+                        }
+                    }
+
+                    .logo:hover {
+                        animation-play-state: paused;
+                    }
+                    
+                    @keyframes logo_anim {
+                    
+                        0%,
+                        100% {
+                            transform: scale(1, 1);
+                        }
+                    
+                        50% {
+                            transform: scale(-1, 1);
+                        }
+                    }
+
+                    .toggle {
+                        position: relative;
+                        width: 36px;
+                        height: 28px;
+                        background: url(../../icons/toggle.png) center center/cover no-repeat;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
