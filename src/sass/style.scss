@@ -1,14 +1,17 @@
 @import 'libs/bootstrap-reboot.min';
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
+@import './base/mixins';
+@import './base/variables';
 @import './blocks/header';
 @import './blocks/about';
 @import './blocks/services';
 @import './blocks/technology';
 @import './blocks/clients';
-@import './blocks/testimonials';
+@import './blocks/news';
 @import './blocks/contacts';
 @import './blocks/footer';
 @import './blocks/media';
+@import './blocks/overlay';
 
 * {
     position: relative;
@@ -19,13 +22,25 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100% !important;
+    position: relative;
+}
+body.active {
+    position: fixed;
 }
 
 main {
     flex: 1 1 auto;
+}
+
+h3 {
+    @include adaptiv-font(20, 16);
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
 }
 
 .container {
@@ -40,6 +55,7 @@ main {
 .heading {
     color: #fff;
     font-size: 30px;
+    @include adaptiv-font(30, 24);
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -48,6 +64,7 @@ main {
 .text {
     color: #fff;
     font-size: 16px;
+    @include adaptiv-font(16, 12);
     font-weight: 300;
     letter-spacing: 1px;
 }

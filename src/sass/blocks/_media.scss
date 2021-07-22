@@ -1,68 +1,156 @@
 @media (max-width: 991px) {
-    .banner {
-        padding: 50px;
-        header {
-            padding: 20px 50px;
-        }
-    }
-    .about {
-        flex-direction: column;
-        .contentBx, .imgBx {
-            width: 100%;
-            padding: 50px;
-            min-height: 400px;
-            text-align: center;
-        }
-    }
-    .services {
-        padding: 50px;
-        .container {
-            justify-content: center;
-            margin-top: 20px;
-            .serviceBx {
-                margin-top: 20px;
-                margin-right: 5px;
-                width: 300px;
-                height: 350px;
+    .header {
+        &__wrapper {
+            .container {
+                .banner {
+                    padding: 20px;
+
+                    .header_up {
+                        padding: 20px 50px;
+
+                        .logo {
+                            img {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                        .toggle {
+                            top: 10px;
+                            span {
+                                width: 30px;
+                                height: 2px;
+                            }
+                        }
+                        .toggle span::before {
+                            top: -10px;
+                        }
+                        .toggle span::after {
+                            top: 10px;
+                        }
+                    }
+                    .toggle.active span::before {
+                        top: 0px;
+                        transform: rotate(45deg);
+                    }
+                    .toggle.active span::after {
+                        top: 0px;
+                        transform: rotate(-45deg);
+                    }
+                    
+
+                    .content {
+                        p {
+                            letter-spacing: normal;
+                            line-height: 20px;
+                        }
+
+                        h1 {
+                            letter-spacing: normal;
+                        }
+                    }
+                }
             }
         }
     }
-    .technology {
-        padding: 50px;
-        padding-top: 300px;
+
+
+    .about {
         flex-direction: column;
-        justify-content: center;
+
+        .contentBx,
         .imgBx {
-            margin-top: 40px;
-            max-width: 250px;
+            width: 100%;
+            padding: 50px 50px 0;
+            min-height: 400px;
+            text-align: center;
+        }
+
+        &-item {
+            flex-direction: column;
+        }
+
+        &-item:nth-child(even) {
+            .imgBx {
+                order: 2;
+            }
+
+            .contentBx {
+                order: 1;
+            }
         }
     }
+
+    .services {
+        padding: 10px 0;
+
+        .container {
+            justify-content: center;
+            margin-top: 20px;
+        }
+        &_heading {
+            letter-spacing: normal;
+        }
+
+        &__container {
+            
+
+            .serviceBx {
+                margin: 20px 5px 10px 0;
+                max-width: 300px;
+                height: 350px;
+                padding: 10px;
+            }
+        }
+    }
+
+    .technology {
+        display: none;
+    }
+
     .client {
         padding: 50px;
+
         .imgBx {
             justify-content: center;
         }
     }
-    .testimonials {
-        padding: 50px;
-        .contentBx {
-            padding: 60px 40px;
-            max-width: 550px;
-            margin-bottom: 40px;
-        }
-        .contentBx:last-child {
-            margin-bottom: 0;
+
+    .news {
+        padding: 50px 12px;
+
+        .containerBx {
+            .contentBx {
+                padding: 30px;
+                max-width: 550px;
+            }
+
+            .contentBx:last-child {
+                margin-bottom: 0;
+            }
         }
     }
+
     .contacts {
-        padding: 50px;
+        &>.container {
+            padding: 30px;
+        }
+
+        .redBg {
+            width: 100%;
+        }
+
+        .imgBx2 {
+            display: none;
+        }
     }
+
     .footer__wrapper {
         padding: 20px 50px;
         flex-direction: column-reverse;
         text-align: center;
-        ul {
-            margin-bottom: 20px;
+
+        .social {
+            padding-bottom: 20px;
         }
     }
 }

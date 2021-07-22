@@ -1,6 +1,6 @@
 .services {
     background: #12222d;
-    padding: 100px;
+    padding: 100px 30px;
     text-align: center;
     &__container {
         max-width: 1200px;
@@ -14,7 +14,7 @@
         .serviceBx {
             position: relative;
             background: #fff;
-            width: 350px;
+            max-width: 350px;
             height: 400px;
             display: flex;
             justify-content: center;
@@ -26,6 +26,7 @@
             }
             h2 {
                 font-size: 20px;
+                @include adaptiv-font(20, 17);
                 letter-spacing: 1px;
                 color: #000;
                 padding-top: 35px;

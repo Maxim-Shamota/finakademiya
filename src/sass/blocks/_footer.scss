@@ -1,30 +1,92 @@
 .footer {
     background: #162c3b;
+
     &__wrapper {
-        padding: 20px 0;
+        padding: 20px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        ul {
+        .social {
             display: flex;
             justify-content: center;
             align-items: center;
+            .icon {
+                margin-left: 20px;
+            }
+            .icon-instagram, 
+            .icon-facebook {
+                width: 40px;
+            }
 
-            li {
-                list-style: none;
+            .icon-instagram path {
+                fill: transparent;
+                stroke-width: 15;
+                stroke: #d6249f;
+                stroke-dasharray: 1650;
+                stroke-dashoffset: 0;
+            }
 
-                a {
-                    text-decoration: none;
-                    display: inline-block;
-                    margin: 0 10px;
+            .icon-facebook path {
+                fill: transparent;
+                stroke-width: 20;
+                stroke: #3b5998;
+                stroke-dasharray: 2700;
+                stroke-dashoffset: 0;
+            }
 
-                    img {
-                        filter: invert(1);
-                        max-width: 20px;
-                    }
+            .icon-instagram:hover path {
+                animation: animate_instagram 2s linear forwards;
+            }
+            .icon-facebook:hover path {
+                animation: animate_facebook 2s linear forwards;
+            }
+            @keyframes animate_instagram {
+                0% {
+                    stroke-dashoffset: 0;
+                }
+                40% {
+                    stroke-dashoffset: 1650;
+                }
+                80% {
+                    stroke-dashoffset: 3300;
+                    fill: transparent;
+                }
+                100% {
+                    stroke-dashoffset: 3300;
+                    fill: #d6249f;
+                }
+            }
+            @keyframes animate_facebook {
+                0% {
+                    stroke-dashoffset: 0;
+                }
+                40% {
+                    stroke-dashoffset: 2700;
+                }
+                80% {
+                    stroke-dashoffset: 5400;
+                    fill: transparent;
+                }
+                100% {
+                    stroke-dashoffset: 5400;
+                    fill: #3b5998;
                 }
             }
         }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &__company {
+        text-align: center;
+        padding-bottom: 30px;
     }
 }
