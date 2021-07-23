@@ -10,3 +10,80 @@
     top: 0;
     background-color: rgba(0,0,0,.95);
 }
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.navigation ul {
+    position: relative;
+}
+.navigation ul li {
+    text-align: center;
+    list-style: none;    
+}
+.navigation ul li a {
+    color: rgb(134, 127, 127);
+    text-decoration: none;
+    @include adaptiv-font(40, 28);
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.navigation ul:hover li a {
+    color: #0002;
+}
+// .navigation ul li:hover a {
+//     color: #000;
+//     background: rgba(255, 255, 255, 0.1);
+// }
+.navigation ul li a:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // font-size: 5em;
+    @include adaptiv-font(50, 26);
+    color: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+}
+.navigation ul li a:hover:before {
+    content: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 3000px;
+    height: 3000px;
+}
+.navigation ul li:nth-child(6n+1) a:before {
+    background: #81ecec;
+}
+.navigation ul li:nth-child(6n+2) a:before {
+    background: #ffeaa7;
+}
+.navigation ul li:nth-child(6n+3) a:before {
+    background: #fd79a8;
+}
+.navigation ul li:nth-child(6n+4) a:before {
+    background: #a29bfe;
+}
+.navigation ul li:nth-child(6n+5) a:before {
+    background: #55efc4;
+}
+.navigation ul li:nth-child(6n+6) a:before {
+    background: #ff7675;
+}

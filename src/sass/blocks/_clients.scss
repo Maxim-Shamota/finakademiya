@@ -2,21 +2,50 @@
     background: #162c3b;
     padding: 100px 30px;
     text-align: center;
-    .imgBx {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 40px;
-        padding: 0 30px;
-        img {
-            max-width: 200px;
-            margin: 20px;
-            opacity: 0.5;
-            cursor: pointer;
+
+    .container {
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
-        img:hover {
-            opacity: 1;
+
+        .imgBx {
+            display: flex;
+            justify-content: center;
+            align-items: normal;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            padding: 0 30px;
+
+            &-item {
+                width: 320px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                padding: 0 30px 30px;
+
+                &-img {
+                    position: relative;
+                    width: 100%;
+                    height: 100px;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        opacity: 0.5;
+                        cursor: pointer;
+                    }
+
+                    img:hover {
+                        opacity: 1;
+                    }
+
+                    p {
+                        flex: 1 1 auto;
+                    }
+                }
+            }
         }
     }
 }

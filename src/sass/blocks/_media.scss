@@ -67,6 +67,12 @@
 
         &-item {
             flex-direction: column;
+            h2 {
+                padding-top: 30px;
+            }
+            p {
+                padding-top: 20px;
+            }
         }
 
         &-item:nth-child(even) {
@@ -92,7 +98,8 @@
         }
 
         &__container {
-            
+            justify-content: center;
+            padding-top: 50px;
 
             .serviceBx {
                 margin: 20px 5px 10px 0;
@@ -112,6 +119,9 @@
 
         .imgBx {
             justify-content: center;
+            &-item {
+                max-width: 320px;
+            }
         }
     }
 
@@ -151,6 +161,12 @@
 
         .social {
             padding-bottom: 20px;
+        }
+    }
+
+    .overlay {
+        .navigation ul li a:before {
+            letter-spacing: normal;
         }
     }
 }

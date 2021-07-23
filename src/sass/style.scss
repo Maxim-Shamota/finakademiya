@@ -68,3 +68,14 @@ h3 {
     font-weight: 300;
     letter-spacing: 1px;
 }
+
+h1[data-lang=eng],
+h2[data-lang=eng],
+h3[data-lang=eng],
+div[data-lang=eng],
+ul[data-lang=eng],
+li[data-lang=eng],
+p[data-lang=eng],
+span[data-lang=eng] {
+    display: none;
+}
