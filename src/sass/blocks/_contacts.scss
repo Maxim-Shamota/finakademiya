@@ -91,6 +91,10 @@
             background: #fff;
             color: #111;
             cursor: pointer;
+            border-radius: 2px;
+        }
+        input[type="submit"]:hover {
+            box-shadow: 0 5px 10px #000;
         }
     }
 }

@@ -26,6 +26,7 @@ body {
 }
 body.active {
     position: fixed;
+    width: 100%;
 }
 
 main {
@@ -50,6 +51,7 @@ h3 {
 
 .main {
     overflow: hidden;
+    background: #162c3b;
 }
 
 .heading {

@@ -6,6 +6,7 @@
                     padding: 20px;
 
                     .header_up {
+                        width: 100%;
                         padding: 20px 50px;
 
                         .logo {
@@ -15,7 +16,9 @@
                             }
                         }
                         .toggle {
-                            top: 10px;
+                            top: 25px;
+                            width: 30px;
+                            height: 30px;
                             span {
                                 width: 30px;
                                 height: 2px;
@@ -27,16 +30,35 @@
                         .toggle span::after {
                             top: 10px;
                         }
-                    }
-                    .toggle.active span::before {
-                        top: 0px;
-                        transform: rotate(45deg);
-                    }
-                    .toggle.active span::after {
-                        top: 0px;
-                        transform: rotate(-45deg);
+                        .toggle.active span::before {
+                            top: 0;
+                        }
+                
+                        .toggle.active span::after {
+                            top: 0;
+                        }
+                        
                     }
                     
+                    .toggle_lang {
+                        right: 85px;
+                        .check {
+                            width: 40px;
+                        }
+                        .check::before {
+                            width: 40px;
+                            height: 20px;
+                            top: -2px;
+                        }
+                        .check::after {
+                            width: 20px;
+                            height: 20px;
+                            top: -2px;
+                        }
+                        .check:checked:after {
+                            left: 20px;
+                        }
+                    }
 
                     .content {
                         p {
