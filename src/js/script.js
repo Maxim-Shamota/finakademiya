@@ -37,7 +37,6 @@ if (localStorage.getItem('checkLang')) {
 }
 
 //toggle langueges
-
 checkLang.addEventListener('change', () => {
     if (checkLang.checked) {
         localStorage.setItem('checkLang', true);

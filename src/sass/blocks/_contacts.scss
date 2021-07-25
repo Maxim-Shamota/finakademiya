@@ -86,15 +86,20 @@
             color: #fff;
         }
 
-        input[type="submit"] {
-            width: 150px;
+        button {
+            padding: 12px;
+            width: 200px;
             background: #fff;
             color: #111;
             cursor: pointer;
-            border-radius: 2px;
+            text-align: center;
+            margin-top: 40px;
+            outline: none;
+            font-weight: 300;
         }
-        input[type="submit"]:hover {
-            box-shadow: 0 5px 10px #000;
+        button:hover {
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, .5);
+            font-weight: 700;
         }
     }
 }
